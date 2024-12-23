@@ -10,6 +10,7 @@ dynamic_padding = true
 
 [window.padding]
 x = 15
+y = 15
 
 [font]
 size = 12.0
