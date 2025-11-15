@@ -24,6 +24,7 @@ alias ll='eza -al --no-time --icons --group-directories-first --git'
 alias la='eza -lha --icons --group-directories-first --git'
 alias lt='eza --tree --level=2 --icons'
 alias vim='nvim'
+alias cat="bat"
 alias cdwm='vim ~/.local/src/dwm/config.h'
 alias mdwm='cd ~/.local/src/dwm/; sudo make clean install;'
 alias mcdwm='cd ~/.local/src/dwm/; sudo make clean install; cd-'
