@@ -10,8 +10,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "MesloLGSNerdFont:size=10" };
-static const char dmenufont[]       = "MesloLGSNerdFont:size=10";
+static const char *fonts[]          = { "Firacode Nerd Font:size=10" };
+static const char dmenufont[]       = "Firacode Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -46,23 +46,41 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 
+// static const Layout layouts[] = {
+// 	/* symbol     arrange function */
+// 	{ "[]=",      tile },    /* first entry is default */
+// 	{ "[M]",      monocle },
+// 	{ "[@]",      spiral },
+// 	{ "[\\]",     dwindle },
+// 	{ "H[]",      deck },
+// 	{ "TTT",      bstack },
+// 	{ "===",      bstackhoriz },
+// 	{ "HHH",      grid },
+// 	{ "###",      nrowgrid },
+// 	{ "---",      horizgrid },
+// 	{ ":::",      gaplessgrid },
+// 	{ "|M|",      centeredmaster },
+// 	{ ">M>",      centeredfloatingmaster },
+// 	{ "><>",      NULL },    /* no layout function means floating behavior */
+// 	{ NULL,       NULL },
+// };
+
 static const Layout layouts[] = {
-	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
-	{ "[@]",      spiral },
-	{ "[\\]",     dwindle },
-	{ "H[]",      deck },
-	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
-	{ "HHH",      grid },
-	{ "###",      nrowgrid },
-	{ "---",      horizgrid },
-	{ ":::",      gaplessgrid },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
-	{ NULL,       NULL },
+    { "▧",      tile },
+    { "☰",      monocle },
+    { "🌀",      spiral },
+    { "⧋",      dwindle },
+    { "🗄",      deck },
+    { "⫻",      bstack },
+    { "⫼",      bstackhoriz },
+    { "▥",      grid },
+    { "⫽",      nrowgrid },
+    { "▭",      horizgrid },
+    { "◼",      gaplessgrid },
+    { "⌗",      centeredmaster },
+    { "⧉",      centeredfloatingmaster },
+    { "🗗",      NULL },   /* floating */
+    { NULL,     NULL },
 };
 
 /* key definitions */
