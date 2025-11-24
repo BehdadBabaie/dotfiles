@@ -46,9 +46,6 @@ zinit ice lucid wait atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-completions                      # Extra completions
 
 zinit ice lucid wait
-zinit light zsh-users/zsh-history-substring-search         # ↑/↓ search by substring
-
-zinit ice lucid wait
 zinit snippet OMZP::colored-man-pages                      # Colored man pages
 
 # ────────────────────────────── 5. Completion appearance ──────────────────────────────
@@ -126,9 +123,6 @@ bindkey -e
 bindkey -r '^[[Z'                     # remove any old Shift+Tab binding
 bindkey '^I' autosuggest-accept       # Tab = accept suggestion
 
-# History substring search with arrows
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
 
 # ────────────────────────────── 11. Final polish ──────────────────────────────
 # Auto-start tmux (uncomment if you want)
