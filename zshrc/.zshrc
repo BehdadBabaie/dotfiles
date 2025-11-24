@@ -36,13 +36,13 @@ ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 # ────────────────────────────── 4. Plugins (turbo mode) ──────────────────────────────
-zinit ice lucid wait
+zinit ice lucid wait atload'_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions                  # Fish-like suggestions
 
 zinit ice lucid wait
 zinit light zdharma-continuum/fast-syntax-highlighting     # Blazing-fast highlighting
 
-zinit ice lucid wait atload'_zsh_autosuggest_start'
+zinit ice lucid wait '
 zinit light zsh-users/zsh-completions                      # Extra completions
 
 zinit ice lucid wait
