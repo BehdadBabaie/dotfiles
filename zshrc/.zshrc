@@ -42,7 +42,7 @@ zinit light zsh-users/zsh-autosuggestions                  # Fish-like suggestio
 zinit ice lucid wait
 zinit light zdharma-continuum/fast-syntax-highlighting     # Blazing-fast highlighting
 
-zinit ice lucid wait '
+zinit ice lucid wait 
 zinit light zsh-users/zsh-completions                      # Extra completions
 
 zinit ice lucid wait
@@ -57,6 +57,7 @@ zstyle ':completion:*' group-name ''
 
 # ────────────────────────────── 6. Prompt – Starship (2025 default) ──────────────────────────────
 if command -v starship >/dev/null; then
+    export STARSHIP_CONFIG="${HOME}/.config/starship-zsh.toml"
     eval "$(starship init zsh)"
 else
     autoload -U colors && colors
