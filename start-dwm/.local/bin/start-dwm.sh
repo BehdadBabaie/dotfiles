@@ -1,5 +1,5 @@
 #!/bin/sh
 
-feh --big-fill --no-fehbg ~/pictures/wallpapers &
+feh --bg-fill --no-fehbg ~/pictures/wallpapers/woc_2.jpg &
 dwmblocks &
 exec dwm
