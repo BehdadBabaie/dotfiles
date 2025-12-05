@@ -1,0 +1,4 @@
+[mgr]
+prepend_keymap = [
+{ on = "i", run = 'shell -- ~/yazi-script.sh $0', desc = "Setting wallpaper"},
+]

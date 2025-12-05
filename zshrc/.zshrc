@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # =============================================================================
 # ~/.zshrc – Clean, Fast & Fully Working 2025 Setup
 # =============================================================================
@@ -47,6 +54,10 @@ zinit light zdharma-continuum/fast-syntax-highlighting
 zinit ice lucid wait
 zinit light zsh-users/zsh-completions
 
+# Install Powerlevel10k via zinit
+zinit ice lucid wait
+zinit light romkatv/powerlevel10k
+
 # OMZ colored man pages
 zinit ice lucid wait
 zinit snippet OMZP::colored-man-pages
@@ -65,18 +76,19 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 zstyle ':completion:*:descriptions' format '%F{yellow}%B─── %d ───%b%f'
 zstyle ':completion:*' group-name ''
 
-# ────────────────────────────── 6. Prompt – Starship ──────────────────────────────
-if command -v starship >/dev/null; then
-    export STARSHIP_CONFIG="${HOME}/.config/starship-zsh.toml"
-    eval "$(starship init zsh)"
-else
-    autoload -U colors && colors
-    PROMPT='%F{magenta}%n%f@%F{cyan}%m%f %F{yellow}%~%f %# '
-fi
+# ────────────────────────────── 6. Prompt – Starship/Powerlevel10k  ──────────────────────────────
+
+#if command -v starship >/dev/null; then
+#    export STARSHIP_CONFIG="${HOME}/.config/starship-zsh.toml"
+#    eval "$(starship init zsh)"
+#else
+#    autoload -U colors && colors
+#    PROMPT='%F{magenta}%n%f@%F{cyan}%m%f %F{yellow}%~%f %# '
+#fi
 
 # ────────────────────────────── 7. eza replacements ──────────────────────────────
 if command -v eza >/dev/null; then
-    alias ls='eza --color=auto --group-directories-first --icons=auto'
+    alias ls='eza -a --color=auto --group-directories-first --icons=auto'
     alias l='eza -1a --icons=auto'
     alias ll='eza -la --git --icons=auto --time-style=long-iso --group-directories-first'
     alias la='eza -a --icons=auto'
@@ -132,4 +144,5 @@ bindkey '^[[Z' autosuggest-accept
 # ────────────────────────────── 11. Optional: auto-start tmux ──────────────────────────────
 # [[ -z "$TMUX" && -x "$(command -v tmux)" ]] && exec tmux new-session -A -s main
 
-
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
