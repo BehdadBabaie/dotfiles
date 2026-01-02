@@ -55,7 +55,6 @@ zinit ice lucid wait
 zinit light zsh-users/zsh-completions
 
 # Install Powerlevel10k via zinit
-zinit ice lucid wait
 zinit light romkatv/powerlevel10k
 
 # OMZ colored man pages

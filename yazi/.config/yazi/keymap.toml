@@ -1,4 +1,4 @@
 [mgr]
 prepend_keymap = [
-{ on = "I", run = 'shell -- ~/.config/yazi/scripts/wallpaper-setter.sh $0', desc = "Setting wallpaper"},
+{ on = "W", run = 'shell -- feh --bg-fill --no-fehbg $0 && ~/.config/yazi/scripts/wallpaper-setter.sh $0', desc = "Setting wallpaper"},
 ]
