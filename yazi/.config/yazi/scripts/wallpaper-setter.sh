@@ -24,5 +24,6 @@ while IFS= read -r line; do
 done < "$TARGET_SCRIPT"
 
 mv "$TMP_FILE" "$TARGET_SCRIPT"
+chmod +x "$TARGET_SCRIPT"
 
 echo "done"
